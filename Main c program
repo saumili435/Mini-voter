@@ -1,0 +1,24 @@
+#include"election.h"
+
+int main(){
+    while(1){
+        printf("\n\t\t\t   1.Stdnt panel \n\t\t\t   2.Adm panel \n\t\t\t   3.Exit \n\t\t\t   Option:");
+		char in;
+        scanf(" %c",&in);
+
+        switch(in){
+            case '1':
+                stdntPanel();
+                break;
+            case '2':
+                admPanel();
+                break;
+            case '3':
+                return 0;
+            default:
+                printf("\nOption not valid");
+                getch();
+        }
+    }
+    return 0;
+}
