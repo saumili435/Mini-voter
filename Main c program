@@ -1,30 +1,24 @@
-#include<stdio.h>
+#include"elected to be.h"
 
 int main(){
-    int n;
     while(1){
-        int stdntPanel;
-        int admPanel;
-        printf("\n\t\t\t   1.stdntPanel \n\t\t\t   2.admPanel \n\t\t\t   3.Exit \n\t\t\t   Option:");
-		int in;
-		printf("enter the input");
-        scanf(" %d",&in);
-        if(in==1)
-        {
-                int c=0;
-                printf("vote goes to student panel:%d",stdntPanel=1);   
-                 c=c+1;
-                printf("the vote count:%d",c) ;
+        printf("\n\t\t\t   1.Stdnt panel \n\t\t\t   2.Adm panel \n\t\t\t   3.Exit \n\t\t\t   Option:");
+		char in;
+        scanf(" %c",&in);
+
+        switch(in){
+            case '1':
+                stdntPanel();
+                break;
+            case '2':
+                admPanel();
+                break;
+            case '3':
+                return 0;
+            default:
+                printf("\nInvalid option");
+                getch();
         }
-        else if(in==2)
-        {
-        	int cc=0;
-        	printf("vote goes to admin panel:%d",admPanel=1);
-        cc=cc+1;	
     }
-    else{
-    	printf("no vote");
-    
-}
-    }
+    return 0;
 }
